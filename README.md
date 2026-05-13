@@ -1,25 +1,37 @@
-Project structure
+# 🧩 Spring Boot Microservices Architecture
 
-1 microservicio composite -
+Microservices architecture built with **Spring Boot** using a hybrid **REST + Event-Driven** approach.
 
-    book-composite-service - Consumes the others microservices.
-        - DTOs
-        - Interfaces controllers
-        - Custom exceptions
+The project is composed of multiple decoupled services:
 
-3 microservicios core - 
+- **book-composite-service** → API aggregation and public REST endpoints
+- **book-service** → Core domain logic and persistence
+- **book-review-service** → Review management
+- **book-recommendation-service** → Recommendation management
+- **api** → Shared contracts, interfaces, and domain models
+- **util** → Shared utilities, event models, and reusable components
 
-    book-recommendation-service
-    book-recommendation-service 
-    book-review-service 
+The architecture is currently evolving with the integration of **Apache Kafka** and **RabbitMQ** for asynchronous event-driven communication.
 
-1 api module
+## ⚙️ Technologies Used
 
-1 util module
+- Java
+- Spring Boot
+- Spring WebFlux
+- Spring Data JPA
+- MongoDB
+- Apache Kafka *(in progress)*
+- RabbitMQ *(in progress)*
+- Docker
+- Docker Compose
+- Maven
 
+## 🚀 Features
 
-Databases
-
-    book-recommendation-service - Mongo DB.
-    book-recommendation-service - Mongo DB.
-    book-review-service - MySQL.
+- Non-blocking REST APIs
+- Microservices architecture
+- Synchronous and asynchronous communication
+- Distributed persistence per service
+- Event-driven architecture
+- Horizontal scalability
+- Full containerized environment with Docker
